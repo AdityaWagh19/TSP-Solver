@@ -1,0 +1,24 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /usr/bin/python
+cachedir: .pytest_cache
+rootdir: /home/claude/tsp_project
+collecting ... collected 16 items
+
+tests/test_tsp.py::test_exact_algorithms_agree[0] PASSED                 [  6%]
+tests/test_tsp.py::test_exact_algorithms_agree[1] PASSED                 [ 12%]
+tests/test_tsp.py::test_exact_algorithms_agree[2] PASSED                 [ 18%]
+tests/test_tsp.py::test_exact_algorithms_agree[3] PASSED                 [ 25%]
+tests/test_tsp.py::test_exact_algorithms_agree[4] PASSED                 [ 31%]
+tests/test_tsp.py::test_approximation_guarantees[0] PASSED               [ 37%]
+tests/test_tsp.py::test_approximation_guarantees[1] PASSED               [ 43%]
+tests/test_tsp.py::test_approximation_guarantees[2] PASSED               [ 50%]
+tests/test_tsp.py::test_approximation_guarantees[3] PASSED               [ 56%]
+tests/test_tsp.py::test_approximation_guarantees[4] PASSED               [ 62%]
+tests/test_tsp.py::test_approximation_guarantees[5] PASSED               [ 68%]
+tests/test_tsp.py::test_approximation_guarantees[6] PASSED               [ 75%]
+tests/test_tsp.py::test_approximation_guarantees[7] PASSED               [ 81%]
+tests/test_tsp.py::test_approximation_guarantees[8] PASSED               [ 87%]
+tests/test_tsp.py::test_approximation_guarantees[9] PASSED               [ 93%]
+tests/test_tsp.py::test_nn_and_2opt_valid_and_improving PASSED           [100%]
+
+============================== 16 passed in 0.25s ==============================

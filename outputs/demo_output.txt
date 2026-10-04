@@ -1,0 +1,13 @@
+TSP demo | cities = 10 | seed = 7
+
+Algorithm           Type           Length   Ratio   Time(ms)
+------------------------------------------------------------
+Brute Force         exact          3.1341   1.000     557.05
+Held-Karp DP        exact          3.1341   1.000       5.58
+Branch & Bound      exact          3.1341   1.000       4.93
+Nearest Neighbour   heuristic      3.2411   1.034       0.02
+MST 2-approx        2-approx       3.5118   1.120       0.06
+Christofides        1.5-approx     3.3606   1.072       0.11
+NN + 2-opt          heuristic      3.1341   1.000       0.07
+
+Optimal tour (Held-Karp): [0, 9, 2, 3, 6, 5, 7, 1, 4, 8]

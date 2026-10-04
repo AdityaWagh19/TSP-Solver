@@ -1,0 +1,4 @@
+numpy>=1.26
+matplotlib>=3.8
+networkx>=3.2      # only used by Christofides for large matchings (>20 odd vertices)
+pytest>=8.0        # for running tests

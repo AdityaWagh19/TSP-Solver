@@ -1,0 +1,35 @@
+== Experiment 1: runtime of exact algorithms ==
+  n  BruteForce(s)     B&B(s)   B&B nodes  HeldKarp(s)       (n-1)!
+  4         0.0000     0.0000          10       0.0000    6.000e+00
+  5         0.0000     0.0001          28       0.0001    2.400e+01
+  6         0.0001     0.0001          69       0.0002    1.200e+02
+  7         0.0007     0.0004         196       0.0004    7.200e+02
+  8         0.0057     0.0015         686       0.0010    5.040e+03
+  9         0.0498     0.0038        1525       0.0022    4.032e+04
+ 10         0.5030     0.0082        2630       0.0050    3.629e+05
+ 11              -     0.0279        7395       0.0129    3.629e+06
+ 12              -     0.1159       31521       0.0267    3.992e+07
+ 13              -     0.4753      125624       0.0574    4.790e+08
+ 14              -          -           -       0.1241    6.227e+09
+ 15              -          -           -       0.2536    8.718e+10
+ 16              -          -           -       0.5584    1.308e+12
+ 17              -          -           -       1.1984    2.092e+13
+ 18              -          -           -       2.4989    3.557e+14
+
+== Experiment 2: approximation ratio vs optimum (n=12, 40 random instances) ==
+Algorithm               Mean  Median   Worst    Best  Theoretical bound
+Nearest Neighbour      1.112   1.101   1.366   1.000  O(log n)
+MST 2-approx           1.185   1.169   1.408   1.000  2.0
+Christofides           1.056   1.045   1.139   1.000  1.5
+NN + 2-opt             1.003   1.000   1.053   1.000  none
+Guarantee check passed: MST <= 2.0 and Christofides <= 1.5 on all instances.
+
+== Experiment 3: larger instances (exact methods infeasible) ==
+Quality = tour length / MST weight (MST weight is a lower bound on OPT, so this over-estimates the true ratio)
+   n                  Nearest Neighbour                      MST 2-approx                      Christofides                        NN + 2-opt
+  20             ratio 1.509 | 0.0000 s            ratio 1.627 | 0.0001 s            ratio 1.412 | 0.0003 s            ratio 1.289 | 0.0003 s
+  50             ratio 1.433 | 0.0002 s            ratio 1.558 | 0.0004 s            ratio 1.258 | 0.0654 s            ratio 1.233 | 0.0028 s
+ 100             ratio 1.416 | 0.0009 s            ratio 1.538 | 0.0014 s            ratio 1.269 | 0.0356 s            ratio 1.222 | 0.0121 s
+ 150             ratio 1.436 | 0.0018 s            ratio 1.531 | 0.0028 s            ratio 1.252 | 0.1054 s            ratio 1.202 | 0.0307 s
+
+Figures and CSV files written to ./outputs
